@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Onu 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    text-align:center;
+    color:white;
+    background: linear-gradient(-45deg,#ff758c,#ff7eb3,#ff9a9e,#fad0c4);
+    background-size:400% 400%;
+    animation:gradientMove 12s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Canvas Particle Background */
+#bgCanvas{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+/* Start Screen */
+#startScreen{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.startBtn{
+    padding:20px 50px;
+    font-size:24px;
+    border:none;
+    border-radius:50px;
+    background:#ff2e78;
+    color:white;
+    cursor:pointer;
+    box-shadow:0 0 25px #ff2e78;
+    transition:0.4s;
+}
+
+.startBtn:hover{
+    transform:scale(1.1);
+}
+
+/* Main Content */
+#mainContent{
+    display:none;
+    padding:50px 20px;
+}
+
+h1{
+    font-family:'Great Vibes',cursive;
+    font-size:70px;
+    margin-bottom:20px;
+    animation:fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(-20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.typing{
+    font-size:24px;
+    margin:20px 0;
+    min-height:40px;
+}
+
+.counter{
+    font-size:22px;
+    margin-top:15px;
+}
+
+/* Gallery with animation */
+.gallery{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+    transition:0.5s;
+    animation: floatImg 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatImg{
+    0% {transform: translateY(0px) rotate(0deg);}
+    50% {transform: translateY(-15px) rotate(2deg);}
+    100% {transform: translateY(0px) rotate(-2deg);}
+}
+
+.gallery img:hover{
+    transform:scale(1.08) rotate(3deg);
+}
+
+/* Love Letter */
+.love-letter{
+    margin-top:50px;
+    font-size:20px;
+    max-width:800px;
+    margin-left:auto;
+    margin-right:auto;
+    line-height:1.8;
+}
+
+/* Floating Hearts */
+.heart{
+    position:fixed;
+    font-size:20px;
+    animation:floatUp 6s linear infinite;
+}
+
+@keyframes floatUp{
+    0%{transform:translateY(100vh); opacity:1;}
+    100%{transform:translateY(-10vh); opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="bgCanvas"></canvas>
+
+<div id="startScreen">
+    <button class="startBtn" onclick="startSurprise()">Onu Pakhii 💕 Click Here</button>
+</div>
+
+<div id="mainContent">
+    <h1>Happy Birthday Onu 💖</h1>
+
+    <div class="typing" id="typingText"></div>
+
+    <div class="counter" id="loveCounter"></div>
+
+    <div class="gallery">
+        <img src="i1.jpg" alt="Onu Pic1">
+        <img src="i2.jpg" alt="Onu Pic2">
+        <img src="i3.jpg" alt="Onu Pic3">
+        <img src="i4.jpg" alt="Onu Pic4">
+    </div>
+
+    <div class="love-letter">
+        💌 Amar pakhiiiiiiiiii ,<br><br>
+ শুভ জন্মদিন আমার প্রিয় বউ অনু ❤️🎂
+তুমি আমার জীবনের সবচেয়ে সুন্দর মানুষ। তোমাকে পেয়ে আমি সত্যিই ভাগ্যবান।
+ তুমি শুধু আমার বউ না, তুমি আমার সুখ,
+ আমার শান্তি,
+ আমার পুরো পৃথিবী। 
+আমি সারাজীবন তোমাকে এভাবেই ভালোবাসতে চাই।
+ Happy Birthday Amar Jaan 💕
+ <br>
+ আজকের দিনটা আমার জন্য অনেক স্পেশাল, কারণ আজ সেই মানুষটার জন্মদিন যে আমার জীবনটা সুন্দর করে দিয়েছে ❤️
+অনু, তোমার হাসিটা দেখলেই আমার মন ভালো হয়ে যায়। আমি চাই সারাজীবন তোমাকে এভাবেই হাসিখুশি দেখতে। শুভ জন্মদিন আমার ভালোবাসা 🎂✨
+<br>
+অনু, তুমি আমার জীবনের সবচেয়ে বড় পাওয়া। আল্লাহর কাছে সবসময় দোয়া করি তুমি যেন সবসময় ভালো থাকো আর আমার পাশে থাকো। তোমাকে ছাড়া আমার জীবনটা কল্পনাও করতে পারি না। Happy Birthday Amar Bou ❤️
+<br>
+শুভ জন্মদিন আমার জান ❤️
+তুমি আমার জীবনের সেই মানুষ, যাকে ছাড়া আমি অসম্পূর্ণ। তোমার হাতটা ধরে সারাজীবন একসাথে পথ চলতে চাই। আমি অনেক অনেক ভালোবাসি তোমাকে অনু 💕
+<br>
+অনু, তুমি আমার জীবনের সবচেয়ে মিষ্টি গল্প। তোমাকে পেয়ে আমার জীবনটা পূর্ণ হয়েছে। তোমার সাথে কাটানো প্রতিটা মুহূর্ত আমার কাছে খুব মূল্যবান। শুভ জন্মদিন আমার প্রিয় বউ 🎂❤️
+<br>
+শুভ জন্মদিন আমার ভালোবাসা ❤️
+তুমি আমার স্বপ্ন, তুমি আমার সুখ, তুমি আমার জীবনের সবচেয়ে সুন্দর অনুভূতি। তোমাকে যত দেখি ততই নতুন করে ভালোবাসতে ইচ্ছে করে। সারাজীবন তোমাকে আগলে রাখতে চাই। Love you Onu 💕
+        <br><br>
+        Shuvo Jonmodin Amar Rani 👑<br>
+        I Love You Forever ♾️
+    </div>
+</div>
+
+<audio id="bgMusic" src="Dil Ko Karaar Aaya  Flute Version  Suman Maharjan.mp3"></audio>
+
+<script>
+function startSurprise(){
+    document.getElementById("startScreen").style.display="none";
+    document.getElementById("mainContent").style.display="block";
+
+    // Play background music
+    const music = document.getElementById("bgMusic");
+    music.volume = 0.5;
+    music.play().catch(()=>console.log("Play blocked, click again"));
+
+    startTyping();
+    startHearts();
+    startCounter();
+}
+
+/* Typing Effect */
+const text="Tumi amar jibon sobceye best ekta oddhai tmi amar lifeline amar sonaa pakhiii 💎✨";
+let i=0;
+function startTyping(){
+    if(i<text.length){
+        document.getElementById("typingText").innerHTML+=text.charAt(i);
+        i++;
+        setTimeout(startTyping,50);
+    }
+}
+
+/* Floating Hearts */
+function startHearts(){
+    setInterval(()=>{
+        const heart=document.createElement("div");
+        heart.className="heart";
+        heart.innerHTML="❤️";
+        heart.style.left=Math.random()*100+"vw";
+        document.body.appendChild(heart);
+        setTimeout(()=>heart.remove(),6000);
+    },300);
+}
+
+/* Love Counter */
+function startCounter(){
+    const startDate=new Date("2023-01-01"); // relationship start date
+    setInterval(()=>{
+        const now=new Date();
+        const diff=now-startDate;
+        const days=Math.floor(diff/(1000*60*60*24));
+        document.getElementById("loveCounter").innerHTML=
+        "Amra ekshathe achi "+days+" din 💕";
+    },1000);
+}
+
+/* Particle Background */
+const canvas=document.getElementById("bgCanvas");
+const ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+for(let j=0;j<120;j++){
+    particles.push({
+        x:Math.random()*canvas.width,
+        y:Math.random()*canvas.height,
+        r:Math.random()*3+1,
+        dx:Math.random()*0.5,
+        dy:Math.random()*0.5
+    });
+}
+
+function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(p=>{
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fillStyle="rgba(255,255,255,0.7)";
+        ctx.fill();
+        p.x+=p.dx;
+        p.y+=p.dy;
+        if(p.x>canvas.width)p.x=0;
+        if(p.y>canvas.height)p.y=0;
+    });
+    requestAnimationFrame(animate);
+}
+animate();
+
+window.addEventListener("resize",()=>{
+    canvas.width=window.innerWidth;
+    canvas.height=window.innerHeight;
+});
+</script>
+
+</body>
+</html>
